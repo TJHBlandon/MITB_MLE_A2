@@ -1,0 +1,72 @@
+x-airflow-env: &airflow-env
+  AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+  AIRFLOW__CORE__FERNET_KEY: "DFnOEwY-ANgLrC05UztmhnPuc4Olk_e6Oihdw-kAWOg="
+  AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+  AIRFLOW__WEBSERVER__WORKERS: "1"
+  AIRFLOW__WEBSERVER__WEB_SERVER_MASTER_TIMEOUT: "300"
+  AIRFLOW_BASE_URL: "http://localhost:8080"
+
+services:
+  airflow-init:
+    build: .
+    environment: *airflow-env
+    volumes:
+      - airflow_data:/opt/airflow
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./utils:/opt/airflow/utils
+      - ./data:/opt/airflow/data:ro
+      - ./datamart:/opt/airflow/datamart
+      - ./models:/opt/airflow/models:rw
+      - ./prediction:/opt/airflow/prediction:rw
+    entrypoint: >
+      /bin/bash -c "
+      # Create directories with proper permissions
+      mkdir -p /opt/airflow/models /opt/airflow/prediction &&
+      chmod 777 /opt/airflow/models /opt/airflow/prediction &&
+      chown -R airflow:airflow /opt/airflow/models /opt/airflow/prediction &&
+      # Initialize Airflow
+      airflow db init &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true"
+
+  airflow-webserver:
+    build: .
+    depends_on: 
+      - airflow-init
+    environment:
+      <<: *airflow-env
+      JAVA_OPTIONS: -Xmx4g
+    volumes:
+      - airflow_data:/opt/airflow
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./utils:/opt/airflow/utils
+      - ./data:/opt/airflow/data:ro
+      - ./datamart:/opt/airflow/datamart
+      - ./models:/opt/airflow/models:rw
+      - ./prediction:/opt/airflow/prediction:rw
+    command: webserver
+    ports: 
+      - "8080:8080"
+
+  airflow-scheduler:
+    build: .
+    depends_on: 
+      - airflow-init
+    environment:
+      <<: *airflow-env
+      JAVA_OPTIONS: -Xmx4g
+    volumes:
+      - airflow_data:/opt/airflow
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./utils:/opt/airflow/utils
+      - ./data:/opt/airflow/data:ro
+      - ./datamart:/opt/airflow/datamart
+      # FIXED: Added missing volume mounts for models and predictions
+      - ./models:/opt/airflow/models:rw
+      - ./prediction:/opt/airflow/prediction:rw
+    command: scheduler
+
+volumes:
+  airflow_data:

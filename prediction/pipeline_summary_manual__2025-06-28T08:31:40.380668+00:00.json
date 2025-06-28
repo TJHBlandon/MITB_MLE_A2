@@ -1,0 +1,57 @@
+{
+  "pipeline_type": "end_to_end_integrated",
+  "completion_timestamp": "2025-06-28 08:35:24",
+  "run_id": "manual__2025-06-28T08:31:40.380668+00:00",
+  "overall_status": "completed_with_issues",
+  "data_processing": {
+    "bronze_layer": {
+      "tables_processed": 4,
+      "total_partitions": 96,
+      "errors": 0
+    },
+    "silver_layer": {
+      "tables_processed": 4,
+      "total_partitions": 96,
+      "errors": 0
+    },
+    "gold_layer": {
+      "feature_rows": 8974,
+      "feature_columns": 74,
+      "label_rows": 8974,
+      "label_columns": 5,
+      "status": "completed"
+    }
+  },
+  "model_training": {
+    "model_saved": true,
+    "model_directory": "/opt/airflow/models/run_manual__2025-06-28T08:31:40.380668+00:00",
+    "storage_method": "local_directory",
+    "has_oot_data": true
+  },
+  "predictions": {
+    "predictions_generated": true,
+    "total_predictions": 1502,
+    "positive_rate": 0.3229027962716378,
+    "threshold_used": 0.3199999999999999,
+    "predictions_saved": true,
+    "oot_performance": {
+      "f1": 0.8098818474758325,
+      "f15": 0.8231441048034934,
+      "auc": 0.9404789203696154
+    }
+  },
+  "monitoring": {
+    "monitoring_completed": true,
+    "monitoring_status": "completed",
+    "data_quality_issues": true,
+    "performance_available": true,
+    "drift_alerts_count": 0,
+    "current_performance": {
+      "f1": 0.8098818474758325,
+      "auc": 0.9404789203696154
+    }
+  },
+  "issues": [
+    "Data quality issues detected"
+  ]
+}

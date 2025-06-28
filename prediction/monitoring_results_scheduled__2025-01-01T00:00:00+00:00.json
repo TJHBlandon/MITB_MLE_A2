@@ -1,0 +1,36 @@
+{
+  "run_id": "scheduled__2025-01-01T00:00:00+00:00",
+  "monitoring_timestamp": "2025-06-28 09:28:05",
+  "total_predictions": 1502,
+  "positive_predictions": 485,
+  "positive_rate": 0.3229027962716378,
+  "avg_prediction_proba": 0.28541040420532227,
+  "threshold_used": 0.3199999999999999,
+  "prob_percentiles": {
+    "p10": 0.017985051870346068,
+    "p25": 0.04016047529876232,
+    "p50": 0.12030445039272308,
+    "p75": 0.5073948353528976,
+    "p90": 0.8466138303279876
+  },
+  "has_performance_metrics": true,
+  "precision": 0.777319587628866,
+  "recall": 0.8452914798206278,
+  "f1_score": 0.8098818474758325,
+  "f15_score": 0.8231441048034934,
+  "auc_score": 0.9404789203696154,
+  "confusion_matrix": {
+    "tn": 948,
+    "fp": 108,
+    "fn": 69,
+    "tp": 377
+  },
+  "drift_alerts": [],
+  "data_quality": {
+    "missing_values": {},
+    "extreme_probabilities": {
+      "very_low": 46,
+      "very_high": 0
+    }
+  }
+}

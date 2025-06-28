@@ -1,0 +1,317 @@
+{
+  "optimal_threshold": 0.3199999999999999,
+  "baseline_results": {
+    "f1_score": 0.7128712871287128,
+    "f1.5_score": 0.6825473991249392,
+    "auc_score": 0.9113088144074825,
+    "threshold": 0.5
+  },
+  "test_results": {
+    "f1_score": 0.73224043715847,
+    "f1.5_score": 0.754439151147683,
+    "auc_score": 0.8977390734661732,
+    "threshold": 0.3199999999999999
+  },
+  "best_params": {
+    "colsample_bytree": 0.9,
+    "learning_rate": 0.05,
+    "max_depth": 4,
+    "min_child_weight": 5,
+    "n_estimators": 200,
+    "reg_alpha": 0,
+    "reg_lambda": 2,
+    "subsample": 0.8
+  },
+  "feature_importance": [
+    {
+      "feature": "outstanding_debt",
+      "importance": 0.11271793395280838
+    },
+    {
+      "feature": "avg_fe_5",
+      "importance": 0.043344054371118546
+    },
+    {
+      "feature": "avg_fe_10",
+      "importance": 0.040392570197582245
+    },
+    {
+      "feature": "avg_fe_9",
+      "importance": 0.034112412482500076
+    },
+    {
+      "feature": "num_credit_inquiries",
+      "importance": 0.02943100593984127
+    },
+    {
+      "feature": "interest_rate",
+      "importance": 0.02858535200357437
+    },
+    {
+      "feature": "avg_fe_3",
+      "importance": 0.027271585538983345
+    },
+    {
+      "feature": "avg_fe_4",
+      "importance": 0.025506313890218735
+    },
+    {
+      "feature": "avg_fe_8",
+      "importance": 0.024144278839230537
+    },
+    {
+      "feature": "delay_from_due_date",
+      "importance": 0.02226840704679489
+    },
+    {
+      "feature": "credit_mix_standard",
+      "importance": 0.020591141656041145
+    },
+    {
+      "feature": "changed_credit_limit",
+      "importance": 0.019283877685666084
+    },
+    {
+      "feature": "avg_fe_2",
+      "importance": 0.019087616354227066
+    },
+    {
+      "feature": "credit_mix_good",
+      "importance": 0.018535220995545387
+    },
+    {
+      "feature": "num_bank_accounts",
+      "importance": 0.0181403961032629
+    },
+    {
+      "feature": "credit_mix_bad",
+      "importance": 0.017753707244992256
+    },
+    {
+      "feature": "payment_behaviour_spent_low",
+      "importance": 0.017593607306480408
+    },
+    {
+      "feature": "num_credit_card",
+      "importance": 0.017589088529348373
+    },
+    {
+      "feature": "credit_history_age_month",
+      "importance": 0.017213648185133934
+    },
+    {
+      "feature": "avg_fe_7",
+      "importance": 0.016449736431241035
+    },
+    {
+      "feature": "payment_behaviour_spent_high",
+      "importance": 0.014863998629152775
+    },
+    {
+      "feature": "amount_invested_monthly",
+      "importance": 0.014820899814367294
+    },
+    {
+      "feature": "debt_consolidation_loan",
+      "importance": 0.014789504930377007
+    },
+    {
+      "feature": "occupation_musician",
+      "importance": 0.01418980397284031
+    },
+    {
+      "feature": "payment_behaviour_value_large",
+      "importance": 0.014093823730945587
+    },
+    {
+      "feature": "num_of_delayed_payment",
+      "importance": 0.014011306688189507
+    },
+    {
+      "feature": "occupation_media_manager",
+      "importance": 0.01372801698744297
+    },
+    {
+      "feature": "avg_fe_6",
+      "importance": 0.012968741357326508
+    },
+    {
+      "feature": "occupation_scientist",
+      "importance": 0.01278826966881752
+    },
+    {
+      "feature": "personal_loan",
+      "importance": 0.012654080055654049
+    },
+    {
+      "feature": "avg_fe_20",
+      "importance": 0.012199503369629383
+    },
+    {
+      "feature": "total_emi_per_month",
+      "importance": 0.012064429000020027
+    },
+    {
+      "feature": "annual_income",
+      "importance": 0.012033391743898392
+    },
+    {
+      "feature": "avg_fe_19",
+      "importance": 0.011811758391559124
+    },
+    {
+      "feature": "age",
+      "importance": 0.011538324877619743
+    },
+    {
+      "feature": "num_of_loan",
+      "importance": 0.01142712403088808
+    },
+    {
+      "feature": "mortgage_loan",
+      "importance": 0.011365176178514957
+    },
+    {
+      "feature": "monthly_balance",
+      "importance": 0.011256747879087925
+    },
+    {
+      "feature": "avg_fe_13",
+      "importance": 0.010890680365264416
+    },
+    {
+      "feature": "avg_fe_16",
+      "importance": 0.01079627312719822
+    },
+    {
+      "feature": "avg_fe_14",
+      "importance": 0.010795831680297852
+    },
+    {
+      "feature": "avg_fe_17",
+      "importance": 0.010760408826172352
+    },
+    {
+      "feature": "payment_behaviour_value_small",
+      "importance": 0.010699034668505192
+    },
+    {
+      "feature": "payment_of_min_amount_nm",
+      "importance": 0.010572576895356178
+    },
+    {
+      "feature": "avg_fe_15",
+      "importance": 0.010311964899301529
+    },
+    {
+      "feature": "avg_fe_1",
+      "importance": 0.010263114236295223
+    },
+    {
+      "feature": "avg_fe_11",
+      "importance": 0.010200242511928082
+    },
+    {
+      "feature": "auto_loan",
+      "importance": 0.010195249691605568
+    },
+    {
+      "feature": "monthly_inhand_salary",
+      "importance": 0.010100634768605232
+    },
+    {
+      "feature": "occupation_manager",
+      "importance": 0.010084068402647972
+    },
+    {
+      "feature": "avg_fe_12",
+      "importance": 0.010028299875557423
+    },
+    {
+      "feature": "occupation_writer",
+      "importance": 0.0091516999527812
+    },
+    {
+      "feature": "credit_utilization_ratio",
+      "importance": 0.009101239033043385
+    },
+    {
+      "feature": "avg_fe_18",
+      "importance": 0.008732913061976433
+    },
+    {
+      "feature": "payment_of_min_amount_yes",
+      "importance": 0.008667157031595707
+    },
+    {
+      "feature": "not_specified",
+      "importance": 0.008498727343976498
+    },
+    {
+      "feature": "student_loan",
+      "importance": 0.007444679271429777
+    },
+    {
+      "feature": "home_equity_loan",
+      "importance": 0.004511690698564053
+    },
+    {
+      "feature": "payday_loan",
+      "importance": 0.002856324426829815
+    },
+    {
+      "feature": "payment_behaviour_value_medium",
+      "importance": 0.002720380201935768
+    },
+    {
+      "feature": "occupation_accountant",
+      "importance": 0.0
+    },
+    {
+      "feature": "credit-builder_loan",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_teacher",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_lawyer",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_architect",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_doctor",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_mechanic",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_engineer",
+      "importance": 0.0
+    },
+    {
+      "feature": "payment_of_min_amount_no",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_developer",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_journalist",
+      "importance": 0.0
+    },
+    {
+      "feature": "occupation_entrepreneur",
+      "importance": 0.0
+    }
+  ],
+  "model_directory": "/opt/airflow/models/run_manual__2025-06-28T08:31:40.380668+00:00",
+  "storage_method": "local_directory"
+}
